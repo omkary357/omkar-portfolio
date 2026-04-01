@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea, button { font-family: inherit; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.btn-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-fill:hover { background: #333; transform: translateY(-1px); }
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #1a1a1a;
+  border: 1.5px solid #ccc;
+  padding: 13px 28px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-line:hover { border-color: #1a1a1a; background: #f5f5f5; }
+
+.scard { transition: box-shadow 0.2s, transform 0.2s; }
+.scard:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
+
+.pcard { animation: fadeUp 0.4s ease both; transition: box-shadow 0.2s, transform 0.2s; }
+.pcard:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.08); transform: translateY(-3px); }
+
+.soc-link:hover { color: #1a1a1a !important; text-decoration: underline; }
+
+input:focus, textarea:focus { outline: none; border-color: #1a1a1a !important; }
