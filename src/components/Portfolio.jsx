@@ -190,7 +190,7 @@ export default function Portfolio() {
             background: "#fff",
           }}>
             <img
-              src="/omkaryadav.avif"
+              src="/favicon.svg"
               alt="Omkar Yadav"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />
