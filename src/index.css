@@ -78,3 +78,94 @@ input, textarea, button { font-family: inherit; }
 .soc-link:hover { color: #1a1a1a !important; text-decoration: underline; }
 
 input:focus, textarea:focus { outline: none; border-color: #1a1a1a !important; }
+
+/* ─── Responsive Layout Classes ──────────── */
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero-content {
+  flex: 1 1 340px;
+  max-width: 560px;
+}
+
+.hero-avatar {
+  flex: 0 0 auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ─── Media Queries ──────────── */
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none; /* Handled by inline styles when open in React, but standard state is hidden */
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* changed to absolute so it's bounded by nav, or fixed if nav is fixed */
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 14px 6%;
+    z-index: 99;
+    gap: 4px;
+  }
+
+  /* Hero */
+  .hero-avatar {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Grids */
+  .about-grid, .contact-grid, .form-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

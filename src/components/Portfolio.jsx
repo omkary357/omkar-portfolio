@@ -75,11 +75,7 @@ export default function Portfolio() {
           Omkar<span style={{ color: "#e05c2a" }}>.</span>
         </span>
 
-        <ul style={{ display: "flex", gap: 2, listStyle: "none", ...(menuOpen ? {
-          display: "flex", flexDirection: "column", position: "fixed",
-          top: 60, left: 0, right: 0, background: "#fff",
-          borderBottom: "1px solid #eee", padding: "14px 6%", zIndex: 99, gap: 4,
-        } : {}) }}>
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           {NAV.map(n => (
             <li key={n}>
               <button onClick={() => scrollTo(n)} style={{
@@ -96,8 +92,7 @@ export default function Portfolio() {
           ))}
         </ul>
 
-        <button style={{ background: "none", border: "none", fontSize: 20, cursor: "pointer" }}
-          onClick={() => setMenuOpen(o => !o)}>
+        <button className="menu-toggle" onClick={() => setMenuOpen(o => !o)}>
           {menuOpen ? "✕" : "☰"}
         </button>
       </nav>
@@ -109,7 +104,7 @@ export default function Portfolio() {
         padding: "110px 6% 80px", gap: 40,
       }}>
         {/* Left content */}
-        <div style={{ flex: "1 1 340px", maxWidth: 560 }}>
+        <div className="hero-content">
           <span style={{
             display: "inline-block", background: "#fef3ee", color: "#e05c2a",
             fontSize: 13, fontWeight: 600, padding: "6px 14px",
@@ -154,15 +149,7 @@ export default function Portfolio() {
         </div>
 
         {/* ── AVATAR (fixed layout) ── */}
-        <div style={{
-          flex: "0 0 auto",
-          position: "relative",
-          width: 300,
-          height: 300,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
+        <div className="hero-avatar">
           {/* Blob */}
           <div style={{
             position: "absolute",
@@ -209,7 +196,7 @@ export default function Portfolio() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 6%" }}>
           <SectionTitle pre="About" main="Me" />
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "start" }}>
+          <div className="about-grid">
             <div>
               {PERSONAL.bio.map((para, i) => (
                 <p key={i} style={{ fontSize: 16, lineHeight: 1.8, color: "#555", ...(i > 0 ? { marginTop: 16 } : {}) }}>
@@ -334,7 +321,7 @@ export default function Portfolio() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 6%" }}>
           <SectionTitle pre="Get In" main="Touch" />
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 56, alignItems: "start" }}>
+          <div className="contact-grid">
             <div>
               <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, marginBottom: 12 }}>
                 Let's build something together
@@ -374,7 +361,7 @@ export default function Portfolio() {
                   ✅ Sent! I'll get back to you soon.
                 </div>
               )}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div className="form-grid">
                 <label style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: 13, fontWeight: 600, color: "#444" }}>
                   Name
                   <input style={inputStyle} required placeholder="Your name"
