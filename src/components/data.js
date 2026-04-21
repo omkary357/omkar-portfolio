@@ -95,16 +95,16 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = [
-  { name: "WordPress",        pct: 88, cat: "CMS"      },
-  { name: "Django / Python",  pct: 78, cat: "Backend"  },
-  { name: "Java / JSP",       pct: 82, cat: "Backend"  },
+  { name: "WordPress",        pct: 85, cat: "CMS"      },
+  { name: "Django / Python",  pct: 75, cat: "Backend"  },
+  { name: "Java / JSP",       pct: 85, cat: "Backend"  },
   { name: "React.js",         pct: 75, cat: "Frontend" },
   { name: "HTML & CSS",       pct: 90, cat: "Frontend" },
   { name: "MySQL",            pct: 82, cat: "Database" },
-  { name: "MongoDB",          pct: 68, cat: "Database" },
-  { name: "Node.js",          pct: 70, cat: "Backend"  },
+  { name: "MongoDB",          pct: 65, cat: "Database" },
+  { name: "Node.js",          pct: 65, cat: "Backend"  },
   { name: "Git & GitHub",     pct: 75, cat: "DevOps"   },
-  { name: "REST APIs",        pct: 78, cat: "Backend"  },
+  { name: "REST APIs",        pct: 70, cat: "Backend"  },
 ];
 
 export const TAG_META = {
