@@ -60,7 +60,7 @@ export const PROJECTS = [
     type:  "Personal Project",
     desc:  "A technical blog deployed on WordPress with themes, plugins, categories, and media management. Configured on Hostinger with domain, hosting setup, and SEO basics.",
     tech:  ["WordPress", "PHP", "Hostinger", "SEO"],
-    link:  "https://techmate.blog/",
+    link:  "https://techmatedemo.wordpress.com/",
   },
   {
     id:    4,

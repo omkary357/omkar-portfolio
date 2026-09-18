@@ -58,7 +58,10 @@ export default function Portfolio() {
     setTimeout(() => setSent(false), 3500);
   };
 
-  const shown = filter === "All" ? PROJECTS : PROJECTS.filter(p => p.tag === filter);
+  // const shown = filter === "All" ? PROJECTS : PROJECTS.filter(p => p.tag === filter);
+  const shown = [...PROJECTS]
+  .sort((a, b) => Number(b.year) - Number(a.year))
+  .filter(p => filter === "All" || p.tag === filter);
 
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#fff", color: "#1a1a1a" }}>
